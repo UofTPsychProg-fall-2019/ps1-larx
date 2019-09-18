@@ -15,6 +15,13 @@ Problem Set 1
 # after competign both steps, commit and push your changes to GitHub
 coder1 = 'hello world! python line " + 1 
 print(coder1)
+# correced code by Xiao Min Chang
+coder1 = 'hello world! python line' + '1'
+print(coder1)
+# new variable with an error for next member
+coder2 = when summer is gone + 2.0
+print(coder2)
+
 
 # second group member's error to fix
 coder2 =
