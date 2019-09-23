@@ -61,6 +61,11 @@ clean_rt = rt.remove(-1)
 clean_rt = rt[:4] + rt[5:]
 #%%
 
+#Laura Gravelsins: I think a simpler way is to use the delete function
+#I think this part of the exercise requires us to use missing_rt 
+del(rt[missing_rt])
+print(rt)
+
 # now you have data with more than one missing value
 rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
 
