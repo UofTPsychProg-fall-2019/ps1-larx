@@ -63,7 +63,9 @@ clean_rt = rt[:4] + rt[5:]
 
 #Laura Gravelsins: I think a simpler way is to use the delete function
 #I think this part of the exercise requires us to use missing_rt in the code
-clean_rt = del(rt[missing_rt])
+clean_rt = del(rt[missing_rt]) 
+
+
 print(clean_rt)
 
 # now you have data with more than one missing value
@@ -90,19 +92,26 @@ missing_rt_trouble = rt_trouble.index(-1)
 
 #the below code doesn't work -- fix later or someone else please fix :)
 
+
 if -1 in rt_trouble:
     clean_rt = rt_trouble.remove(-1)
 else: 
     clean_rt = rt_trouble
-    
     
 #%%
 
 # for the last section, you will work with a list of lists:
 rt_new = [400, 450, 500, 440, -1, 410, 570]
 trial_num = [1,2,3,4,5,6,7]
-accuracy = [0, 1, 0, 0, 1, 0]
+accuracy = [0, 1, 0, 0, 1, 0] # only 6 trials already? 
+#does this mean the accuracy score isn't here, and doesn't need to be removed?
 data = [rt_new, trial_num, accuracy]
+
+data[0].index(-1)
+del(data[0][4]) # is there a way to do both at once?
+print(data[0])
+del(data[1][4])
+print(data[1])
 
 # this master list combines information about each trial in an experiment,
 # where index 0 in each sublist refers to data from the first trial, etc.
