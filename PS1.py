@@ -29,9 +29,16 @@ print(coder2)
 coder3 = 'lions' + , + 'tigers' + , + 'and bears'
 print(coder3)
 
+#corrected by Laura Gravelsins 
+coder3 = 'lions, ' + 'tigers, ' + 'and bears'
+print(coder3)
+
+#new variable with two errors for next member to fix  
+coder4 = [seven, 8, 9, 9+'1']
+
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
-#coder3 =
+#coder4
 
 # etc. until all group members have fixed and made 1 error
 
