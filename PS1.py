@@ -62,9 +62,9 @@ clean_rt = rt[:4] + rt[5:]
 #%%
 
 #Laura Gravelsins: I think a simpler way is to use the delete function
-#I think this part of the exercise requires us to use missing_rt 
-del(rt[missing_rt])
-print(rt)
+#I think this part of the exercise requires us to use missing_rt in the code
+clean_rt = del(rt[missing_rt])
+print(clean_rt)
 
 # now you have data with more than one missing value
 rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
@@ -78,6 +78,10 @@ missing_rt_trouble = rt_trouble.index(-1)
 #this doesn't work because index only returns the first index position, 
 #and we would only know to remove that one whether we used the index method or the .remove method,
 #since .remove only removes the first element, and index we would have to specify
+
+#Laura Gravelsins: this doesn't work because rt_trouble.index(-1) only returns the position of the first missing rt (not the second), 
+#so if we use the delete function: del(rt_trouble[missing_rt_trouble]), it will only remove the first missing rt, 
+#because it is equivalent to del(rt_trouble[4])
 
 # now write an if statement that you can use to remove the frist missing value 
 # only when there is a missing value (-1) in a list 
