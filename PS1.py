@@ -88,10 +88,6 @@ clean_rt_trouble = rt_trouble
 # this statement should always generate a clean_rt list; if there's no missing
 # data clean_rt is set to the original rt list.   
 
-# the below code doesn't work -- fix later or someone else please fix :)
-# Xiao Min Chang: the same situation happens like above: NoneType object. However,
-# we get what we want after repeating this procedure twice given that there are two missing data in the list.
-
 #RR: yay this works!
 
 if -1 in rt_trouble:
@@ -111,8 +107,9 @@ accuracy = [0, 1, 0, 0, 1, 0] # only 6 trials already?
 data = [rt_new, trial_num, accuracy]
 
 # RR: This works yay!
-data[0].index(-1)
-del(data[0][4], data [1][4]) 
+missing_data = data[0].index(-1)
+del(data[0][missing_data], data [1][missing_data]) 
+clean_data = data
 
 
 
@@ -123,8 +120,5 @@ del(data[0][4], data [1][4])
 # be sure to only work with the master data list, to practice indexing 
 # lists of lists
 
-# Xiao Min Chang: still does not work :(
-missing_data = data[0].index(-1)
-print(missing_data)
-clean_data = del data[0][missing_data] data[1][missing_data]
+
 
