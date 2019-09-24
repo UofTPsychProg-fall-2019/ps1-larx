@@ -69,6 +69,7 @@ missing_rt = rt.index(-1)
 # does not work which I don't know why. I ran it and it says "invalid syntx".
 # Did you run the code and it worked well?
 #RR: yay this works!!
+# Xiao Min: Yeah, I kind of get the logic in the syntax.
 del(rt[missing_rt]) 
 clean_rt = rt
 
@@ -125,4 +126,4 @@ clean_data = data
 # lists of lists
 
 
-
+## It seems like everything works now! 
