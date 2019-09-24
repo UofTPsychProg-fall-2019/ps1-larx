@@ -98,9 +98,9 @@ missing_rt_trouble = rt_trouble.index(-1)
 # we get what we want after repeating this procedure twice given that there are two missing data in the list.
 
 if -1 in rt_trouble:
-    clean_rt = rt_trouble.remove(-1)
+    clean_rt = rt_trouble.remove(-1) + []
 else: 
-    clean_rt = rt_trouble
+    clean_rt = rt_trouble + []
     
 
 #%%
@@ -114,9 +114,8 @@ data = [rt_new, trial_num, accuracy]
 
 data[0].index(-1)
 del(data[0][4]) # is there a way to do both at once?
-print(data[0])
 del(data[1][4])
-print(data[1])
+
 
 # this master list combines information about each trial in an experiment,
 # where index 0 in each sublist refers to data from the first trial, etc.
