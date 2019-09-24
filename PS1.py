@@ -36,9 +36,6 @@ print(coder3)
 #new variable with two errors for next member to fix  
 coder4 = [seven, 8, 9, 9+'1']
 
-#corrected by An Qi Zhang
-coder4 = ['seven', 8, 9, '9+1']
-print(coder4)
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
 #coder4
@@ -56,13 +53,6 @@ rt = [400, 450, 500, 440, -1, 410, 570]
 # use the index method to find the missing value 
 missing_rt = rt.index(-1)
 
-# and then use missing_rt to remove the trial from rt
-#multiple ways to do this -- unsure which one, but I think the second is more correct for this exercise
-#this removes -1 from rt but creates a NoneType clean_rt list and doesn't need the index? 
-clean_rt = rt.remove(-1)
-#this removes -1 from rt based off index number an creates new list
-# Xiao Min Chang: This code works well!
-clean_rt = rt[:4] + rt[5:]
 #%%
 
 #Laura Gravelsins: I think a simpler way is to use the delete function
@@ -70,22 +60,20 @@ clean_rt = rt[:4] + rt[5:]
 # Xiao Min Chang: Yes I agree with Laura on this. but somehow this line of code
 # does not work which I don't know why. I ran it and it says "invalid syntx".
 # Did you run the code and it worked well?
-
-clean_rt = del(rt[missing_rt]) 
-print(clean_rt)
+#RR: yay this works!!
+del(rt[missing_rt]) 
+clean_rt = rt
 
 # now you have data with more than one missing value
 rt_trouble = [400, 450, 500, 440, -1, 410, 570, -1, 400]
-
 
 # try the same procedure. Does it work? 
 # use a comment to explain why or why not below in comments
 
 missing_rt_trouble = rt_trouble.index(-1)
 
-#this doesn't work because index only returns the first index position, 
-#and we would only know to remove that one whether we used the index method or the .remove method,
-#since .remove only removes the first element, and index we would have to specify
+del(rt_trouble[missing_rt_trouble]) 
+clean_rt_trouble = rt_trouble
 
 #Laura Gravelsins: this doesn't work because rt_trouble.index(-1) only returns the position of the first missing rt (not the second), 
 #so if we use the delete function: del(rt_trouble[missing_rt_trouble]), it will only remove the first missing rt, 
@@ -100,10 +88,13 @@ missing_rt_trouble = rt_trouble.index(-1)
 # Xiao Min Chang: the same situation happens like above: NoneType object. However,
 # we get what we want after repeating this procedure twice given that there are two missing data in the list.
 
+#RR: yay this works!
+
 if -1 in rt_trouble:
-    clean_rt = rt_trouble.remove(-1)
+    rt_trouble.remove(-1)
+    clean_rt2 = rt_trouble
 else: 
-    clean_rt = rt_trouble
+    clean_rt2 = rt_trouble
     
 
 #%%
@@ -115,9 +106,10 @@ accuracy = [0, 1, 0, 0, 1, 0] # only 6 trials already?
 #does this mean the accuracy score isn't here, and doesn't need to be removed?
 data = [rt_new, trial_num, accuracy]
 
+# RR: This works yay!
 data[0].index(-1)
-del(data[0][4]) # is there a way to do both at once?
-del(data[1][4])
+del(data[0][4], data [1][4]) 
+
 
 
 # this master list combines information about each trial in an experiment,
