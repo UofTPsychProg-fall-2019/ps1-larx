@@ -58,14 +58,17 @@ missing_rt = rt.index(-1)
 #this removes -1 from rt but creates a NoneType clean_rt list and doesn't need the index? 
 clean_rt = rt.remove(-1)
 #this removes -1 from rt based off index number an creates new list
+# Xiao Min Chang: This code works well!
 clean_rt = rt[:4] + rt[5:]
 #%%
 
 #Laura Gravelsins: I think a simpler way is to use the delete function
 #I think this part of the exercise requires us to use missing_rt in the code
+# Xiao Min Chang: Yes I agree with Laura on this. but somehow this line of code
+# does not work which I don't know why. I ran it and it says "invalid syntx".
+# Did you run the code and it worked well?
+
 clean_rt = del(rt[missing_rt]) 
-
-
 print(clean_rt)
 
 # now you have data with more than one missing value
@@ -90,14 +93,16 @@ missing_rt_trouble = rt_trouble.index(-1)
 # this statement should always generate a clean_rt list; if there's no missing
 # data clean_rt is set to the original rt list.   
 
-#the below code doesn't work -- fix later or someone else please fix :)
-
+# the below code doesn't work -- fix later or someone else please fix :)
+# Xiao Min Chang: the same situation happens like above: NoneType object. However,
+# we get what we want after repeating this procedure twice given that there are two missing data in the list.
 
 if -1 in rt_trouble:
     clean_rt = rt_trouble.remove(-1)
 else: 
     clean_rt = rt_trouble
     
+
 #%%
 
 # for the last section, you will work with a list of lists:
