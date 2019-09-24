@@ -125,3 +125,8 @@ print(data[1])
 # be sure to only work with the master data list, to practice indexing 
 # lists of lists
 
+# Xiao Min Chang: still does not work :(
+missing_data = data[0].index(-1)
+print(missing_data)
+clean_data = del data[0][missing_data] data[1][missing_data]
+
