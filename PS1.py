@@ -63,13 +63,6 @@ missing_rt = rt.index(-1)
 
 #%%
 
-#Laura Gravelsins: I think a simpler way is to use the delete function
-#I think this part of the exercise requires us to use missing_rt in the code
-# Xiao Min Chang: Yes I agree with Laura on this. but somehow this line of code
-# does not work which I don't know why. I ran it and it says "invalid syntx".
-# Did you run the code and it worked well?
-#RR: yay this works!!
-# Xiao Min: Yeah, I kind of get the logic in the syntax.
 del(rt[missing_rt]) 
 clean_rt = rt
 
@@ -93,13 +86,12 @@ clean_rt_trouble = rt_trouble
 # this statement should always generate a clean_rt list; if there's no missing
 # data clean_rt is set to the original rt list.   
 
-#RR: yay this works!
 
 if -1 in rt_trouble:
     rt_trouble.remove(-1)
-    clean_rt2 = rt_trouble
+    clean_rt = rt_trouble
 else: 
-    clean_rt2 = rt_trouble
+    clean_rt = rt_trouble
     
 
 #%%
@@ -107,16 +99,8 @@ else:
 # for the last section, you will work with a list of lists:
 rt_new = [400, 450, 500, 440, -1, 410, 570]
 trial_num = [1,2,3,4,5,6,7]
-accuracy = [0, 1, 0, 0, 1, 0] # only 6 trials already? 
-#does this mean the accuracy score isn't here, and doesn't need to be removed?
+accuracy = [0, 1, 0, 0, 1, 0] 
 data = [rt_new, trial_num, accuracy]
-
-# RR: This works yay!
-missing_data = data[0].index(-1)
-del(data[0][missing_data], data [1][missing_data]) 
-clean_data = data
-
-
 
 # this master list combines information about each trial in an experiment,
 # where index 0 in each sublist refers to data from the first trial, etc.
@@ -125,5 +109,9 @@ clean_data = data
 # be sure to only work with the master data list, to practice indexing 
 # lists of lists
 
+#deleting from rt_new & trial_num, but not accuracy, because the missing data is already missing from there!
+missing_data = data[0].index(-1)
+del(data[0][missing_data], data [1][missing_data]) 
+clean_data = data
 
-## It seems like everything works now! 
+
