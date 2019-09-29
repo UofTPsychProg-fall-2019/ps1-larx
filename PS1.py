@@ -13,15 +13,18 @@ Problem Set 1
 # first group member (coder 1), your job is to first correct it 
 # and make a new variable with an error for the next group member to fix
 # after competign both steps, commit and push your changes to GitHub
+
+# This assignment is completed by An Qi Zhang, Rebekah Reuben, Laura Gravelsins, and Xiao Min Chang.
+
 coder1 = 'hello world! python line " + 1
 print(coder1)
-# correced code by Xiao Min Chang
+# corrected code by Xiao Min Chang
 coder1 = 'hello world! python line' + '1'
 print(coder1)
 # new variable with an error for next member 
 coder2 = when summer is gone + 2.0
 print(coder2)
-#correcred by Rebekah Reuben 
+#corrected by Rebekah Reuben 
 coder2 ='when summer is gone' + '2.0'
 print(coder2)
 
@@ -41,8 +44,6 @@ print(coder4)
 coder4 = ['seven', 8, 9, '9+1']
 print(coder4)
 
-# fifth error
-coder5 = seven + seven
 
 # now the second group member should define a variable with an error
 # and then commit and push changes to GitHub
